@@ -2,6 +2,7 @@ package io.github.atlas2832.clairvoyance;
 
 import io.github.atlas2832.clairvoyance.client.ClientKeys;
 import io.github.atlas2832.clairvoyance.compat.CuriosCompat;
+import io.github.atlas2832.clairvoyance.compat.CuriosRegistration;
 import io.github.atlas2832.clairvoyance.init.ModItems;
 import io.github.atlas2832.clairvoyance.network.NetworkHandler;
 import net.minecraftforge.api.distmarker.Dist;
@@ -35,7 +36,7 @@ public class Clairvoyance {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         if (CuriosCompat.isLoaded()) {
-            event.enqueueWork(() -> CuriosCompat.registerCurio(ModItems.CLAIRVOYANCE.get()));
+            event.enqueueWork(() -> CuriosRegistration.registerCurio(ModItems.CLAIRVOYANCE.get()));
         }
     }
 
